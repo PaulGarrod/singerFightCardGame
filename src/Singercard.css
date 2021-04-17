@@ -1,0 +1,19 @@
+.Singercard {
+    width: 300px;
+    padding: 10px;
+    margin: 1rem;
+    box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    color: #4e4e4e;
+}
+
+.Singercard-title {
+    color: #123
+}
+
+.Singercard-data {
+    font-weight: bold;
+    font-style: italic;
+}
