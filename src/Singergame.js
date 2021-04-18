@@ -33,7 +33,7 @@ class Singergame extends React.Component {
     render() {
         let hand1 = [];
         let hand2 = [];
-        let singersList = [ ...this.props.singers ]
+        let singersList = [ ...this.props.singers ];
         
         while (hand1.length < 2) {
             let randInd = Math.floor(Math.random() * singersList.length);
@@ -48,8 +48,8 @@ class Singergame extends React.Component {
         }
 
         let exp1 = hand1.reduce((exp, singers) => exp + singers.exp, 0);
-        let exp2 = hand2.reduce((exp, singers) => exp + singers.exp, 0);
         let intim1 = hand1.reduce((intim, singers) => intim + singers.intim, 0);
+        let exp2 = hand2.reduce((exp, singers) => exp + singers.exp, 0);
         let intim2 = hand2.reduce((intim, singers) => intim + singers.intim, 0);
 
         let total1 = exp1 - intim2;
@@ -57,9 +57,9 @@ class Singergame extends React.Component {
 
         return (
           <div className='Singergame'>
-              <Singerdex singers={hand1} exp={exp1} intim={intim1} totalScore={total1} isWinner={total1 > total2}/>
-              <Singerdex singers={hand2} exp={exp2} intim={intim2} totalScore={total2} iswinner={total2 > total1}/>
-          </div>  
+              <Singerdex singers={hand1} exp={exp1} intim={intim1} totalScore={total1} isWinner={total1 >= total2} />
+              <Singerdex singers={hand2} exp={exp2} intim={intim2} totalScore={total2} isWinner={total2 >= total1} />
+          </div>
         );
     }
 }

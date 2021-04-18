@@ -31,13 +31,18 @@ class Singerdex extends React.Component {
         ]
     };
     render() {
+        let title;
+        if(this.props.isWinner){
+            title = <h2 className='Singerdex-winner'>Winning Hand!</h2>
+        } else {
+            title = <h2 className='Singerdex-loser'>Losing Hand!</h2>
+        };
+
         return (
           <div className='Singerdex'>
-              <h1>Your Front Man Tag Team is:</h1>
-              <p>Their Fight Experience Score is: {this.props.exp} </p>
-              <p>With an intimidation rating of: {this.props.intim} </p>
+              <p>Team Toughness: {this.props.exp} | Team Intimidation: {this.props.intim}</p>
               <h2>Fight Score: {this.props.totalScore} </h2>
-              <h2>{this.props.isWinner ? "WINNER!" : "LOSER!!!"} </h2>
+              {title}
               <div className='Singerdex-cards'>
                 {this.props.singers.map((singer) => (
                     <Singercard name={singer.name} band={singer.band} exp={singer.exp} intim={singer.intim} img={singer.img} />

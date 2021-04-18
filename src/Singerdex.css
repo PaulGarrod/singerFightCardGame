@@ -3,3 +3,12 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
+.Singerdex-winner {
+    color: green;
+}
+
+.Singerdex-loser {
+    color: red;
+}
+
