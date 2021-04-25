@@ -57,8 +57,8 @@ class Singergame extends React.Component {
 
         return (
           <div className='Singergame'>
-              <Singerdex singers={hand1} exp={exp1} intim={intim1} totalScore={total1} isWinner={total1 >= total2} />
-              <Singerdex singers={hand2} exp={exp2} intim={intim2} totalScore={total2} isWinner={total2 >= total1} />
+              <Singerdex team='Team 1' singers={hand1} exp={exp1} intim={intim1} totalScore={total1} isWinner={total1 >= total2} />
+              <Singerdex team='Team 2' singers={hand2} exp={exp2} intim={intim2} totalScore={total2} isWinner={total2 >= total1} />
           </div>
         );
     }

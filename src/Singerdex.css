@@ -1,7 +1,13 @@
-.Singerdex-cards {
+.Singerdex {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+.Singerdex-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .Singerdex-winner {
